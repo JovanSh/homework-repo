@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* Grid css */
+
+.container {
+  height: 818px;
+  width: 100%;
+  border: 5px solid black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid .one {
+  background-color: darkred;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.grid .two {
+  background-color: red;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.grid .three {
+  background-color: red;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.grid .four {
+  background-color: darkred;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+/* aimation-one css */
+
+.animation-box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  margin: 150px 300px;
+  background-color: white;
+  z-index: 1;
+  position: relative;
+  left: 0;
+  top: 0;
+
+  animation: loadingAnimationOne 10s cubic-bezier(0, 0, 0, 0) infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes loadingAnimationOne {
+  0% {
+    width: 0%;
+    background-color: white;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 100px;
+    background-color: white;
+    opacity: 0;
+  }
+}
+
+.transperent-box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  margin-left: 300px;
+  margin-right: 300px;
+  background-color: lightgray;
+  opacity: 0.3;
+  position: absolute;
+  left: 5px;
+  bottom: 460px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+
+  animation-name: boxAnimation;
+  animation-timing-function: ease-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes boxAnimation {
+  0% {
+    left: 405px;
+    top: 255px;
+  }
+
+  25% {
+    left: 285px;
+    top: 255px;
+  }
+
+  50% {
+    left: 285px;
+    top: 135px;
+  }
+
+  75% {
+    left: 405px;
+    top: 135px;
+  }
+
+  100% {
+    left: 405px;
+    top: 255px;
+  }
+}
+
+/* animation-two css */
+
+.loadingBar-one {
+  height: 30px;
+  width: 300px;
+  border: 1px solid black;
+  margin: 185px 200px;
+  background-color: white;
+  z-index: 1;
+  position: relative;
+  bottom: 0;
+  left: 0;
+
+  animation: loadingAnimationTwo 10s cubic-bezier(0, 0, 0, 0) infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes loadingAnimationTwo {
+  0% {
+    width: 0%;
+    background-color: white;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    background-color: white;
+    opacity: 0;
+  }
+}
+
+.transperent-bar {
+  height: 30px;
+  width: 300px;
+  border: 1px solid black;
+  background-color: lightgray;
+  opacity: 0.3;
+  position: absolute;
+  left: 960px;
+  bottom: 495px;
+}
+
+.text-one {
+  position: absolute;
+  left: 1030px;
+  bottom: 493px;
+  color: white;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+/* animation-three css */
+
+.loadingBar-two {
+  height: 30px;
+  width: 300px;
+  border: 1px solid black;
+  background-color: darkred;
+  position: relative;
+  left: 200px;
+  top: 170px;
+}
+
+.text-two {
+  color: white;
+  font-size: 26px;
+  letter-spacing: 2px;
+  position: absolute;
+  left: 280px;
+  bottom: 110px;
+}
+
+.loadingBar-three {
+  height: 10px;
+  width: 300px;
+  border: 1px solid black;
+  background-color: white;
+  position: absolute;
+  left: 205px;
+  bottom: 140px;
+
+  animation: loadingAnimationThree 10s cubic-bezier(0, 0, 0, 0) infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes loadingAnimationThree {
+  0% {
+    width: 0%;
+    background-color: white;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    background-color: white;
+    opacity: 0;
+  }
+}
+
+.loadingBar-four {
+  height: 10px;
+  width: 300px;
+  border: 1px solid black;
+  background-color: white;
+  position: absolute;
+  left: 205px;
+  bottom: 102px;
+
+  animation: loadingAnimationFour 10s cubic-bezier(0, 0, 0, 0) infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes loadingAnimationFour {
+  0% {
+    width: 0%;
+    background-color: white;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    background-color: white;
+    opacity: 0;
+  }
+}
+
+/* animation-four css */
+
+.static-circle {
+  height: 30px;
+  width: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 190px 360px;
+  background-color: white;
+  position: relative;
+  right: 0;
+  bottom: 0;
+}
+
+.moving-circle-one {
+  height: 30px;
+  width: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.3;
+  position: absolute;
+  right: 370px;
+  bottom: 90px;
+
+  animation: rotateCircleOne 1.5s ease-in-out infinite;
+}
+
+@keyframes rotateCircleOne {
+  0% {
+    transform: rotate(90deg) translateY(70px);
+  }
+
+  50% {
+    transform: rotate(270deg) translateY(70px);
+  }
+
+  100% {
+    transform: rotate(450deg) translateY(70px);
+  }
+}
+
+.moving-circle-two {
+  height: 30px;
+  width: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.3;
+  position: absolute;
+  right: 370px;
+  bottom: 90px;
+
+  animation: rotateCircleTwo 1.5s ease-in-out infinite;
+}
+
+@keyframes rotateCircleTwo {
+  0% {
+    transform: rotate(270deg) translateY(70px);
+  }
+
+  50% {
+    transform: rotate(450deg) translateY(70px);
+  }
+
+  100% {
+    transform: rotate(630deg) translateY(70px);
+  }
+}
